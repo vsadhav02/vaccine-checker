@@ -13,7 +13,7 @@ def send_alert(mobiles, message):
 
     # get one phone number at a time. phone numbers should be comma seperated.
     for mobile in mobiles:
-        message = client.messages \
+        message1 = client.messages \
             .create(
                 body=message,
                 from_=twilio_phone,
