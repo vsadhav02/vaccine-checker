@@ -41,8 +41,8 @@ python app.py
 ## Environment Variables for local devlopment in linux
 
 You can save below variables in .env file and then run below command to get them loaded.
-You can save multiple mobile numbers like below
-"+911234567890,+912345678901"
+You can save multiple mobile numbers like - "+911234567890,+912345678901"
+You can also save multiple comma seperated pincode to track two locations simultaneously.
 
 ```
 source .env
@@ -51,7 +51,7 @@ source .env
 -   export TWILIO_ACCOUNT_SID='your_acc_seed'
 -   export TWILIO_AUTH_TOKEN='your_auth_token'
 -   TWILIO_PHONE='twilio_prchased_phone'
--   export PINCODE='your_location_pin'
+-   export PINCODES='your_location_pin'
 -   export MOBILES='mobile_numbers'
 -   export FREQUENCY='10'
 
@@ -72,7 +72,7 @@ docker run -it \
 -e TWILIO_ACCOUNT_SID='your_acc_seed' \
 -e TWILIO_AUTH_TOKEN='your_auth_token' \
 -e TWILIO_PHONE='twilio_prchased_phone' \
--e PINCODE='your_location_pin' \
+-e PINCODES='your_location_pin' \
 -e MOBILES='mobile_numbers' \
 -e FREQUENCY='10' \
 --name my-app your_repo/cowin-app:v1.0

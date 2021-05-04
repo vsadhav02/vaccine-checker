@@ -5,12 +5,10 @@ from datetime import date
 import os
 
 
-def notify_me():
+def notify_me(mobiles, pincode):
     # supress warning due to self signed certificates for devlopment environment.
     urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-    pincode = os.environ['PINCODE']
-    mobiles = os.environ['MOBILES']
     today = date.today().strftime('%d-%m-%Y')
 
     # get next 7 days vaccine slots near to your area pincode
