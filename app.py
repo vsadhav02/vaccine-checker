@@ -5,15 +5,20 @@ import os
 
 sched = BlockingScheduler()
 frequency = int(os.environ['FREQUENCY'])
+pincodes = os.environ['PINCODES'].split(',')
+mobiles = os.environ['MOBILES'].split(',')
+print(f"You will see vaccine information in next {frequency} minutes...")
 
 # Run cron like scheduler every 10 minutes or so
 @sched.scheduled_job('interval', minutes=frequency)
 def timed_job():
-    print('-'*35)
     print(datetime.now(),
           f': Checking available vaccine slots every {frequency} minutes ....')
-    notify_me()
-    print('-'*35, '\n')
+
+    for pincode in pincodes:
+        print('-'*35)
+        notify_me(mobiles=mobiles, pincode=pincode)
+        print('-'*35, '\n')
 
 
 sched.start()

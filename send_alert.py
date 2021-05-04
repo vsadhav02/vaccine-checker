@@ -10,10 +10,9 @@ def send_alert(mobiles, message):
     auth_token = os.environ['TWILIO_AUTH_TOKEN']
     twilio_phone = os.environ['TWILIO_PHONE']
     client = Client(account_sid, auth_token)
-    mobile_list = mobiles.split(',')
 
     # get one phone number at a time. phone numbers should be comma seperated.
-    for mobile in mobile_list:
+    for mobile in mobiles:
         message = client.messages \
             .create(
                 body=message,
