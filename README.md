@@ -89,7 +89,7 @@ docker push your_repo/cowin-app:v1.0
 3. For free acount you have to verify mobile numbers which you will be sending sms to.
    you have to go to Phone Numbers -> Verified Caller IDs -> Add your mobile number.
 4. Got to settings -> General -> API credentials and copy your account SID and Auth Token into environment variables.
-5. Update `PINCODE with your location pin code`. If you dont get slots, try changing to nearby pincodes or explore APIsetu link mentioned in references.
+5. Update `PINCODES` with pincodes nearby to you.
 
 ## References
 
