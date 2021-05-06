@@ -13,9 +13,10 @@ def notify_me(pincode, mobiles):
 
     # get next 7 days vaccine slots near to your area pincode
     url = f"https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByPin?pincode={pincode}&date={today}"
+    header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'}
 
     # always verify signature in production environment
-    response = requests.get(url, verify=False)
+    response = requests.get(url, headers=header, verify=False)
     output = response.json()
 
     for center in output['centers']:
