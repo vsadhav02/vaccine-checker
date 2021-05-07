@@ -4,7 +4,7 @@
 
 This app will send you sms alert when there is covid-19 vaccine shot available based on your area pin code in India.This app checks availability for next 7 days and you can send sms to multiple phone numbers embedded as list in `USER_DATA` environment variable. This is helpful if your family or friends live at different locations and you want to track availability for all those locations simultaneously and alert them when their location pincode shows slot available.
 
-If you find `USER_DATA` variable too difficult to manipulate, I would suggest to download or checkout git commit tagged as v1.2. That has pincode and mobile number as plain string. Just follow README file over there.
+If you find `USER_DATA` variable too difficult to manipulate, I would suggest to download or checkout git commit tagged as v2.0. That has pincode and mobile number as plain string. Just follow README file over there.
 
 **I have humble request to not run this app too frequently to avoid load on Government API and help fellow citizens to get shots as well.**
 
