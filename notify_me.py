@@ -5,7 +5,7 @@ from datetime import date
 import os
 
 
-def notify_me(mobiles, pincode):
+def notify_me(pincode, mobiles):
     # supress warning due to self signed certificates for devlopment environment.
     urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
@@ -26,6 +26,7 @@ def notify_me(mobiles, pincode):
             # sms me when 1 or more slots are free
             if session['available_capacity'] > 0:
                 print('Hurrey!! you have found free slot. Go ahead and book fast!!')
+                print(message)
                 send_alert(mobiles=mobiles, message=message)
             else:
                 print(message)
